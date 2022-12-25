@@ -1,0 +1,99 @@
+.container{
+    padding: 40px;
+    background-color: #F5F5F5;
+}
+.table-header{
+    padding:25px;
+    display: flex;
+    justify-content: space-between;
+}
+.input-container{
+    width: 380px;
+    height: 65px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.input-boxs{
+    width: 350px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #BCBCBC;
+    padding-left: 25px;
+    box-sizing: border-box;
+}
+.icon{
+    margin:10px;
+    width: 30px;
+    height: 30px;
+    color: #6AB4F8;
+}
+.table-icons{
+    width: 20px;
+    height: 20px;   
+  color: #BCBCBC;
+
+}
+.link{
+    color:white;
+    text-decoration: none;
+}
+.property-button{
+    color: white;
+    background-color:#6AB4F8 ;
+    border: 1px solid #6AB4F8;
+    width: 182px;
+    height: 50px;
+    border-radius: 25px;
+    margin-top: 0px;
+    
+}
+table{
+    width: 1205px;
+    border-collapse: collapse;   
+}
+tr{ 
+    border: 10px solid #F5FAF5;
+    border-radius: 20px;
+}
+tr td{
+    text-align: center;
+}
+tr th{
+    color: #284E91;
+}
+tr td:first-child, tr th:first-child{
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px
+}
+tr td:last-child, tr th:last-child{
+
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px
+}
+.table-row{
+    width: 1200px;
+    height: 65px;
+    border-radius: 60px;
+    background-color: white;
+}
+
+.status-button{
+    background-color: #F5FAF5;
+    font-size: 0.9em;
+    width: 80px;
+    height: 40px;
+    color: #416899;
+    border: 1px solid #F5F5F5;
+    margin: 0;
+
+}
+.action{
+    margin:0px;
+    background: none;
+   border:1px solid white;
+    width:50px;
+    height: 30px;
+}
