@@ -14,7 +14,7 @@ function Table() {
 
 
     const fetchData = () => {
-        axios.get("http://localhost:8000/product")
+        axios.get("https://pleximus-backend.onrender.com/product")
             .then((data) => {
                 console.log(data);
                 setData(data.data);
@@ -38,7 +38,7 @@ function Table() {
 
     function handleDelete(_id) {
         axios
-            .delete(`http://localhost:8000/product/${_id}`)
+            .delete(`https://pleximus-backend.onrender.com/product/${_id}`)
             .then(() => {
                 fetchData()
             });

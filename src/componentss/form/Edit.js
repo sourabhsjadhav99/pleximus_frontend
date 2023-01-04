@@ -7,7 +7,7 @@ export default function Edit() {
     const navigate = useNavigate();
     const [data, setData] = useState({});
     const fetchData = () => {
-        fetch(`http://localhost:8000/product/${_id}`)
+        fetch(`https://pleximus-backend.onrender.com/product/${_id}`)
             .then((response) => response.json())
             .then((data) => {
                 setData({
@@ -29,7 +29,7 @@ export default function Edit() {
 
     const submitForm = (e) => {
         e.preventDefault()
-        axios.put(`http://localhost:8000/product/${_id}`, {
+        axios.put(`https://pleximus-backend.onrender.com/product/${_id}`, {
             product_name: data.product_name,
             product_description: data.product_description,
             product_price: data.product_price,

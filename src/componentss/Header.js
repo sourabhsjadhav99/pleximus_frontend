@@ -8,7 +8,7 @@ function Header() {
   let {email} = useParams()
   let [data, setData]=useState({})
   const fetchData = () => {
-    fetch(`http://localhost:8000/login/${email}`)
+    fetch(`https://pleximus-backend.onrender.com/login/${email}`)
         .then((response) => response.json())
         .then((data) => {
             setData(data[0]);

@@ -9,7 +9,7 @@ function SignIn() {
   let [password, setPassword] = useState();
   function postData() {
 
-    fetch("/login", {
+    fetch("https://pleximus-backend.onrender.com/login", {
       method: "POST",
       body: JSON.stringify({
         email, password
