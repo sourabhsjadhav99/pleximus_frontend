@@ -9,17 +9,16 @@ function Table() {
     const [searchApiData, setSearchApiData] = useState([]);
     const [filterVal, setFilterval] = useState("");
     let navigate = useNavigate()
-    let {email} =useParams()
+    let { email } = useParams()
 
 
 
     const fetchData = () => {
-        fetch("/product")
-            .then((response) => response.json())
+        axios.get("http://localhost:8000/product")
             .then((data) => {
                 console.log(data);
-                setData(data);
-                setSearchApiData(data);
+                setData(data.data);
+                setSearchApiData(data.data);
             });
     };
     useEffect(() => {
@@ -39,21 +38,21 @@ function Table() {
 
     function handleDelete(_id) {
         axios
-            .delete(`/product/${_id}`)
+            .delete(`http://localhost:8000/product/${_id}`)
             .then(() => {
                 fetchData()
             });
     }
- let handleAdd=()=> {
+    let handleAdd = () => {
         navigate(`/form/${email}`)
     }
-    let handleView=(_id)=> {
+    let handleView = (_id) => {
         navigate(`/view/${_id}`)
     }
-    let handleEdit=(_id)=> {
+    let handleEdit = (_id) => {
         navigate(`/Edit/${_id}`)
     }
-    
+
     return (
         <div className="container">
             <div className='table-header'>
@@ -82,22 +81,22 @@ function Table() {
                     <th>Product description</th>
                     <th>Product price</th>
                     <th>Operations</th>
-             
+
                 </tr>
-                {data.map((data, index) => {
+                { data.map((data, index) => {
                     return (
                         <tr key={index} className="table-row">
                             <td>{data.product_name}</td>
                             <td>{data.product_description}</td>
                             <td>{data.product_price}</td>
                             <td>
-                            <button  onClick={() => { handleView(data._id) }} className='action'><FiEye className='table-icons' /></button>
-                            <button className='action' onClick={() => { handleEdit(data._id) }}><FiEdit2 className='table-icons' /></button>
+                                <button onClick={() => { handleView(data._id) }} className='action'><FiEye className='table-icons' /></button>
+                                <button className='action' onClick={() => { handleEdit(data._id) }}><FiEdit2 className='table-icons' /></button>
                                 <button className='action' onClick={() => { handleDelete(data._id) }}><FiDelete className='table-icons' /></button>
                             </td>
                         </tr>
                     );
-                })}
+                }) }
             </table>
         </div>
     );

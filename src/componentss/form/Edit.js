@@ -7,7 +7,7 @@ export default function Edit() {
     const navigate = useNavigate();
     const [data, setData] = useState({});
     const fetchData = () => {
-        fetch(`/product/${_id}`)
+        fetch(`http://localhost:8000/product/${_id}`)
             .then((response) => response.json())
             .then((data) => {
                 setData({
@@ -29,7 +29,7 @@ export default function Edit() {
 
     const submitForm = (e) => {
         e.preventDefault()
-        axios.put(`/product/${_id}`, {
+        axios.put(`http://localhost:8000/product/${_id}`, {
             product_name: data.product_name,
             product_description: data.product_description,
             product_price: data.product_price,

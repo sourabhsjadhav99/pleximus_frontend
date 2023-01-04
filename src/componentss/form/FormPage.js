@@ -18,7 +18,8 @@ export default function FormPage() {
     }
     const submitForm = (e) => {
         e.preventDefault()
-        if(data.product_name, data.product_description, data.product_price){axios.post('/product', {
+        if(data.product_name, data.product_description, data.product_price){
+            axios.post('http://localhost:8000/product', {
             product_name: data.product_name,
             product_description: data.product_description,
             product_price: data.product_price,

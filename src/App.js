@@ -2,10 +2,10 @@ import React from 'react'
 import { Routes, Route } from "react-router-dom";
 import Error from './componentss/Error';
 import Header from './componentss/Header';
-import FormPage from './componentss/Multistep_Form/FormPage';
-import View from './componentss/Multistep_Form/View';
+import FormPage from './componentss/form/FormPage';
+import View from './componentss/form/View';
 import DisplayData from './componentss/Searchbar_Table/DisplayData';
-import Edit from './componentss/Multistep_Form/Edit';
+import Edit from './componentss/form/Edit';
 import SignIn from "./componentss/SignIn_SignUp/SignIn"
 import SignUp from "./componentss/SignIn_SignUp/SignUp"
 function App() {

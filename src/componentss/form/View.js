@@ -11,7 +11,7 @@ function View() {
 
 
   const fetchData = async (_id) => {
-    let response = await axios.get(`/product/${_id}`)
+    let response = await axios.get(`http://localhost:8000/product/${_id}`)
     console.log(response);
 
     setData(response.data[0])
